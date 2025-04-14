@@ -1,85 +1,94 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center_horizontal"
     android:padding="16dp">
 
-<ImageView
-    android:src="@drawable/image_logo"
-    android:layout_width="300dp"
-    android:layout_height="150dp"/>
-
+    <ImageView
+        android:src="@drawable/image_logo"
+        android:layout_width="100dp"
+        android:layout_height="100dp"/>
 
     <TextView
+        android:textStyle="bold"
+        android:textSize="24sp"
+        android:layout_margin="4dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Calculadora IMC"
-        android:textSize="30sp"
-        android:layout_margin="16dp"
-        android:textStyle="bold"/>
+        android:text="Calculadora IMC" />
+
+    <RadioGroup
+        android:layout_margin="4dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <RadioButton
+            android:id="@+id/radio_button_mujer"
+            android:layout_margin="4dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mujer"/>
+        <RadioButton
+            android:id="@+id/radio_button_hombre"
+            android:layout_margin="4dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hombre"/>
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/edit_text_edad"
+        android:inputType="number"
+        android:layout_margin="4dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Edad"/>
 
     <LinearLayout
+        android:layout_margin="4dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
-    <RadioButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hombre"
-        android:layout_margin="16dp"/>
+        <EditText
+            android:id="@+id/edit_text_metros"
+            android:inputType="number"
+            android:layout_margin="4dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Metros"/>
 
-    <RadioButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Mujer"
-        android:layout_margin="16dp"/>
+        <EditText
+            android:id="@+id/edit_text_cm"
+            android:inputType="number"
+            android:layout_margin="4dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Centímetros"/>
+
     </LinearLayout>
 
     <EditText
+        android:id="@+id/edit_text_peso"
+        android:inputType="number"
+        android:layout_margin="4dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Edad:"
-        android:layout_margin="16dp"/>
+        android:hint="Peso (Kg)"/>
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Metros:"
-        android:layout_margin="16dp"/>
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Centimetros:"
-        android:layout_margin="16dp"/>
-</LinearLayout>
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Peso(kg):"
-        android:layout_margin="16dp"/>
     <Button
+        android:id="@+id/button_calcular"
+        android:layout_margin="8dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Calcular"
-        android:layout_margin="16dp"/>
+        android:text="Calcular"/>
 
     <TextView
+        android:id="@+id/text_view_result"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="21"
-        android:layout_margin="16dp"/>
+        android:layout_height="wrap_content"/>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Tienes el peso adecuado para tu salud"
-        android:layout_margin="16dp"/>
+</LinearLayout>
